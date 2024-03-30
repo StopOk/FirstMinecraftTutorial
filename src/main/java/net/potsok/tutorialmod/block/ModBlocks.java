@@ -29,16 +29,16 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SAPPHIRE_ORE = registerBlock("sapphire_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
-                    .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(300, 600)));
+                    .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
     public static final RegistryObject<Block> DEEPSLATE_SAPPHIRE_ORE = registerBlock("deepslate_sapphire_ore",
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)
-                        .strength(4f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)));
+                        .strength(1f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)));
     public static final RegistryObject<Block> NETHER_SAPPHIRE_ORE = registerBlock("nether_sapphire_ore",
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.NETHERRACK)
-                        .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
-    public static final RegistryObject<Block> END_STONE_SAPPHIRE_ORE = registerBlock("en_stone_sapphire_ore",
+                        .strength(1f).requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
+    public static final RegistryObject<Block> END_STONE_SAPPHIRE_ORE = registerBlock("end_stone_sapphire_ore",
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE)
-                        .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(4, 6)));
+                        .strength(1f).requiresCorrectToolForDrops(), UniformInt.of(4, 6)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
