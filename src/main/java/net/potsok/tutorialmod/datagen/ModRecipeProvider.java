@@ -49,6 +49,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.APPLE)
                 .requires(Items.SUGAR)
                 .requires(Items.EGG)
+                .unlockedBy(getHasName(Items.APPLE), has(Items.APPLE))
                 .save(pWriter);
     }
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients,
